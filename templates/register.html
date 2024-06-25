@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Register page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css')}}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Luckiest Guy:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Segoe UI:wght@700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo Narrow:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poly:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300&display=swap"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="register-page">
+      <div class="kayako-group">
+        <img
+          class="kayako-icon1"
+          loading="lazy"
+          alt=""
+          src="{{ url_for('static', filename='kayako.svg') }}"
+        />
+
+        <div class="clubhub-container">
+          <h1 class="clubhub1">ClubHub</h1>
+        </div>
+      </div>
+      <section class="register-page-inner">
+        <div class="frame-parent5">
+          <div class="frame-parent6">
+            <div class="saly-1-group">
+              <img
+                class="saly-1-icon1"
+                loading="lazy"
+                alt=""
+                src="{{ url_for('static', filename='saly1@2x.jpg') }}"
+              />
+
+              <h1 class="welcome-to-our1">Welcome to our community</h1>
+            </div>
+            <div class="start-your-new-journey-with-us-container">
+              <p class="start-your-new1">
+                Start your new journey with us and join our community
+              </p>
+            </div>
+          </div>
+          <div class="frame-wrapper2">
+            <form action="/register" method="POST" class="frame-form">
+              <div class="frame-parent7">
+                <div class="sign-in-button-container-wrapper">
+                  <div class="sign-in-button-container">
+                    <button class="rectangle-container"  id="signIn">
+                      <div class="frame-child1"></div>
+                      <a href="/login" class="sign-in2">Sign in</a>
+                    </button>
+                       
+                        <button class="rectangle-container"  id="registerPage">
+                          <div class="frame-child1"></div>
+                          <b class="sign-in2">Register</b>
+                        </button>
+                  </div>
+                </div>
+              
+              </div>
+              <input class="username" placeholder="Username" type="text" id="name" name="name" />
+
+              <input class="frame-input" placeholder="College id" type="email" id="email" name="email" />
+
+              <input class="frame-child2" placeholder="Password" type="password" id="pwd" name="password"  />
+
+              <button class="sign-in3" id="regispage">
+                <div class="sign-in-child"></div>
+                <div type="submit" class="resigter" >Submit</div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
