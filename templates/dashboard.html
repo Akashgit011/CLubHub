@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css')}}"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  
   <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Luckiest Guy:wght@400&display=swap"
@@ -239,7 +239,7 @@
                       src="{{ url_for('static', filename='group-31.svg') }}"
                     />
   
-                    <button class="button3" id="yourFeedButton"><a href="/dashboard">Your feed</a></button>
+                    <a href="/dashboard"><button class="button3">Your feed</button></a>
                   </div>
                   <div class="search-separator">
                     <div class="search-separator-child"></div>
@@ -250,7 +250,7 @@
                 <div class="club-header">
                   <img class="group-icon1" alt="" src="{{ url_for('static', filename='group.svg') }}" />
                 </div>
-                <button class="button3" id="searchClubButton"><a href="/search">Search clubs</a></button>
+                <a href="/search"><button class="button3" >Search clubs</button></a>
               </div>
             </div>
             <div class="your-club-header-wrapper">
@@ -263,7 +263,7 @@
                     src="{{ url_for('static', filename='image-6@2x.jpg') }}"
                   />
                 </div>
-                <button class="button3" id="yourClubButton"><a href="/your">Your clubs</a></button>
+                <a href="/your"><button class="button3" >Your clubs</button></a>
               </div>
             </div>
             <div class="calendar-day-parent">
@@ -274,7 +274,7 @@
                 src="{{ url_for('static', filename='calendarday.svg') }}"
               />
   
-              <button class="button3" id="calendarButton"><a href="/calendar">Calendar</a></button>
+             <a href="/calendar"> <button class="button3">Calendar</button></a>
             </div>
             <div class="announcement-header-wrapper">
               <div class="announcement-header">
@@ -286,7 +286,7 @@
                     src="{{ url_for('static', filename='image-1@2x.jpg') }}"
                   />
                 </div>
-                <button class="button3" id="announcementButton"><a href="/announcement">Announcement</a></button>
+                <a href="/announcement"><button class="button3">Announcement</button></a>
               </div>
             </div>
           </nav>
@@ -300,19 +300,12 @@
               />
   
               <div class="live-event-wrapper">
-                <button class="button3" id="liveEventButton"><a href="/live">Live event</a></button>
+                <a href="/live"><button class="button3">Live event</button></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-  <div class="container">
-      <div class=" row justify-content-center">
-        <div class="col-sm-8">
-            <a href="/logout" class="btn btn-dark">Logout</a>
-        </div>
-      </div>
-  </div>
 
 </body>
 </html>
