@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/your-clubs.css')}}"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Luckiest Guy:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Segoe UI:wght@700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo Narrow:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poly:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@300&display=swap"
+    />
+  </head>
+  <body>
+    <div class="top-bar2">
+      <div class="your-club-frame">
+        <div class="your-club">Your Club</div>
+        <div class="icon-container">
+          <a href="/profile">
+            <button id="profileButton" class="icon-button">
+                <img src="{{ url_for('static', filename='profile.svg') }}" alt="Profile Icon" class="icon">
+            </button></a>
+          <button id="notificationButton" class="icon-button">
+              <img src="{{ url_for('static', filename='notification.svg') }}" alt="Notification Icon" class="icon">
+          </button>
+      </div>
+      </div>
+      </div>
+      <div class="container">
+        <a href="/discussion"> <button id="createGroupButton1">Your Clubs</button></a>
+        <button id="createGroupButton">Create Club</button>
+
+        <div id="groupFormContainer" class="hidden">
+            <h2>Create Club</h2>
+            <form id="groupForm">
+                <label for="groupName">Group Name:</label>
+                <input type="text" id="groupName" name="groupName" required><br><br>
+
+                <label for="profilePic">Profile Picture:</label>
+                <input type="file" id="profilePic" name="profilePic" accept="image/*" required><br><br>
+
+                <label for="headerPic">Header Picture:</label>
+                <input type="file" id="headerPic" name="headerPic" accept="image/*" required><br><br>
+
+                <button type="submit">Create Club</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("createGroupButton").addEventListener("click", function() {
+            document.getElementById("groupFormContainer").classList.remove("hidden");
+        });
+
+        document.getElementById("groupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+           const groupName = document.getElementById("groupName").value;
+           const profilePic = document.getElementById("profilePic").files[0];
+           const headerPic = document.getElementById("headerPic").files[0];
+
+        });
+    </script>
+
+      <div class="rectangle-parent1">
+        <div class="frame-child6"></div>
+        <nav class="feed-header">
+          <div class="clubhub-frame">
+            <a class="clubhub2">ClubHub</a>
+          </div>
+          <div class="feed-search">
+            <div class="search-bar">
+              <div class="search-input">
+                <div class="search-icon">
+                  <img
+                    class="search-icon-child"
+                    loading="lazy"
+                    alt=""
+                    src="{{ url_for('static', filename='group-31.svg') }}"
+                  />
+
+                  <a href="/dashboard"><button class="button3">Your feed</button></a>
+                </div>
+                <div class="search-separator">
+                  <div class="search-separator-child"></div>
+                </div>
+              </div>
+            </div>
+            <div class="club-header-parent">
+              <div class="club-header">
+                <img class="group-icon1" alt="" src="{{ url_for('static', filename='group.svg') }}" />
+              </div>
+              <a href="/search"><button class="button3" >Search clubs</button></a>
+            </div>
+          </div>
+          <div class="your-club-header-wrapper">
+            <div class="your-club-header">
+              <div class="your-club-content">
+                <img
+                  class="image-6-icon"
+                  loading="lazy"
+                  alt=""
+                  src="{{ url_for('static', filename='image-6@2x.jpg') }}"
+                />
+              </div>
+              <a href="/your"><button class="button3" >Your clubs</button></a>
+            </div>
+          </div>
+          <div class="calendar-day-parent">
+            <img
+              class="calendar-day-icon"
+              loading="lazy"
+              alt=""
+              src="{{ url_for('static', filename='calendarday.svg') }}"
+            />
+
+            <a href="/calendar"> <button class="button3">Calendar</button></a>
+          </div>
+          <div class="announcement-header-wrapper">
+            <div class="announcement-header">
+              <div class="announcement-content">
+                <img
+                  class="image-1-icon"
+                  loading="lazy"
+                  alt=""
+                  src="{{ url_for('static', filename='image-1@2x.jpg') }}"
+                />
+              </div>
+              <a href="/announcement"><button class="button3">Announcement</button></a>
+            </div>
+          </div>
+        </nav>
+        <div class="live-event-header-wrapper">
+          <div class="live-event-header">
+            <img
+              class="image-5-icon"
+              loading="lazy"
+              alt=""
+              src="{{ url_for('static', filename='image-5@2x.jpg') }}"
+            />
+
+            <div class="live-event-wrapper">
+              <a href="/live"><button class="button3">Live event</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
